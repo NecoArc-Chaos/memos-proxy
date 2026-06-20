@@ -1,8 +1,17 @@
 {
-  "rewrites": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/:path*",
-      "destination": "https://neco-arcchaos-memos.hf.space/:path*"
+      "src": "/api/(.*)",
+      "dest": "https://neco-arcchaos-memos.hf.space/api/$1"
+    },
+    {
+      "src": "/h/api/(.*)",
+      "dest": "https://neco-arcchaos-memos.hf.space/h/api/$1"
+    },
+    {
+      "src": "/[^\\.]*",
+      "dest": "https://usememos.github.io/memos/index.html"
     }
   ]
 }
